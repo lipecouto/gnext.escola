@@ -7,7 +7,6 @@ export const Global = createGlobalStyle`
         margin: 0;
         padding: 0;
         height: 100vh;
-        background-image: url(${bgimg});
         background-repeat: no-repeat;
         background-size: auto;
         box-sizing: border-box;

@@ -63,6 +63,7 @@ export const InputContainer = styled.div`
   align-items: center;
   height: 20%;
   width: 100%;
+  background: rgba(255, 255, 255, 0.15);
 `;
 
 export const ButtonContainer = styled.div`
@@ -71,6 +72,7 @@ export const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  background: rgba(255, 255, 255, 0.15);
 `;
 
 export const LoginWith = styled.h5`
