@@ -3,6 +3,7 @@ import * as React from 'react';
 import Global from './styles/global';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
+import 'materialize-css';
 
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 function App() {

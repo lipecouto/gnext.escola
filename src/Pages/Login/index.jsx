@@ -17,8 +17,8 @@ const Login = () =>{
         <MainContainer>
             <WelcomeText>Welcome</WelcomeText>
             <InputContainer>
-                <Input type="text" placeholder="Email" />
-                <Input type="password" placeholder="Password" />
+                <Input type="text" placeholder="Email" id={'email'} className='validate'/>
+                <Input type="password" placeholder="Password" id={'password'} className='validate'/>
             </InputContainer>
             <ButtonContainer>
                 <Button content="Sign Up" />

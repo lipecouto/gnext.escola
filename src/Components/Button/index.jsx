@@ -13,11 +13,15 @@ const StyledButton = styled.button`
   border: none;
   color: white;
   cursor: pointer;
+  
 
   &:hover{
     background-color: #44cd6f;
   }
+
   &:focus{
     background-color: #44cd6f;
   }
+
+
 `;

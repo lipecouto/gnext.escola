@@ -9,9 +9,10 @@ export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: ${px2vw(32)};
+  margin: ${px2vw(0)};
   max-width: 100%;
-
+  box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+  height: 100%;
   @media (min-width: 1024px) {
     flex-wrap: nowrap;
   }
@@ -21,24 +22,55 @@ export const Box = styled.div`
   display: flex;
   width: ${px2vw(320, 320)};
   min-height: ${px2vw(200, 320)};
-  flex-direction: column;
-  padding: ${px2vw(20)};
-  margin: ${px2vw(20)};
+  padding-right: 5px;
+ 
   background-color: ${props => props.bgColor};
-  height: 100%;
+ 
 
   @media (min-width: 768px) {
-    width: ${px2vw(320, 768)};
-    min-height: ${px2vw(200, 768)};
-    height: 100%;
+    width: ${px2vw(1450)};
+    min-height: ${px2vw(200)};
   }
 
   @media (min-width: 1024px) {
-    width: ${px2vw(500)};
+    width: ${px2vw(1450)};
     min-height: ${px2vw(300)};
-    height: 100%;
+    
   }
 `;
+
+export const RegisterContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-start;
+
+  @media only screen and (min-width: 360px) {
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
+  @media only screen and (min-width: 411px) {
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
+  @media only screen and (min-width: 768px) {
+    justify-content: flex-start;
+    flex-direction: row;
+    
+  }
+`
+
+export const FormContainer = styled.form`
+  width: 100%;
+  flex: 2;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  box-sizing: inherit;
+`
 
 export const BoxTitle = styled.h3`
   color: #333;
@@ -59,3 +91,5 @@ export const BoxText = styled.p`
     font-size: 1rem;
   }
 `;
+
+

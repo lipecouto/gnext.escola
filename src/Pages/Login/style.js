@@ -42,6 +42,7 @@ export const MainContainer = styled.div`
     width: 80vw;
     height: 80vh;
   }
+  
   @media only screen and (min-width: 1024px) {
     width: 70vw;
     height: 50vh;
@@ -49,6 +50,7 @@ export const MainContainer = styled.div`
   @media only screen and (min-width: 1280px) {
     width: 80vw;
     height: 80vh;
+    padding: 0 20% 0 20%;
   }
 `;
 

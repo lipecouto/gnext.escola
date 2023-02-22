@@ -1,7 +1,11 @@
 import styled from "styled-components";
 
-export default function Input({ type, placeholder }) {
-  return <StyledInput type={type} placeholder={placeholder} />;
+export default function Input({ type, placeholder, id, iconName }) {
+  return (
+    <InputDiv className="input-field col s6">
+      <StyledInput type={type} id={id}/>
+      <InputLabel htmlFor={id}>{placeholder}</InputLabel>
+    </InputDiv>);
 }
 
 const StyledInput = styled.input`
@@ -15,16 +19,18 @@ const StyledInput = styled.input`
   outline: none;
   color: #3c354e;
   font-size: 1rem;
-  font-weight: bold;
-  &:focus {
-    display: inline-block;
-    box-shadow: 0 0 0 0.2rem #b9abe0;
-    backdrop-filter: blur(12rem);
-    border-radius: 2rem;
-  }
-  &::placeholder {
-    color: #b9abe099;
-    font-weight: 100;
-    font-size: 1rem;
+  font-weight: normal;
+
+  &:focus{
+    box-shadow: none !important;
   }
 `;
+
+const InputDiv = styled.div`
+  width: 100%
+`
+
+const InputLabel = styled.label`
+  height: 10px;
+`
+
