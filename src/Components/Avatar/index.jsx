@@ -1,27 +1,62 @@
 import styled from "styled-components";
-import { Button, Card, Row, Col, Icon } from 'react-materialize';
+import { Button, TextInput, Icon } from 'react-materialize';
+import { useState } from "react";
 
 
 export default function Avatar({ content }) {
+  const [photoImg, setPhotoImg] = useState({file: ''});
+
+  const handleGetImagem = (photo) =>{
+    setPhotoImg({file: URL.createObjectURL(photo.target.files[0])})
+  }
   return<>  
             <AvatarContainer>
-                <AvatarBox>               
+                <AvatarBox>
+                  <ImgBox
+                    src={photoImg.file}
+                    >
+                  </ImgBox>               
                 </AvatarBox>
                 <FloatButtom 
                     className="red"
-                    icon={<Icon center tiny>add</Icon>}con
+                    icon={<InnerIcon>add</InnerIcon>}
                     floating
                     node="button"
                     waves="light"
                     large>
+                  <PhotoInput
+                    type="file"
+                    id="photo_send"
+                    accept="image/*" 
+                    onChange={(event) => handleGetImagem(event)}
+                  />
                     
                 </FloatButtom>
             </AvatarContainer>
            
         </>;
 }
+
+const PhotoInput = styled.input`
+    background-color: transparent !important;
+    opacity: 0;
+    position: absolute;
+`
+
+const InnerIcon = styled(Icon)`
+    align-self: center;
+    font-size: 2.5rem !important;
+`
+const ImgBox = styled.img`
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+`
+
 const FloatButtom = styled(Button)`
     position: absolute;
+    display: flex;
     padding-right: 10rem;
     margin-right: 7rem;
     border: 5px solid #fff !important;
@@ -44,6 +79,7 @@ const AvatarBox = styled.div`
     border-radius: 50%;
     width: 300px;
     height: 300px;
+    overflow: hidden;
     @media only screen and (min-width: 360px) {
         width: 300px;
         height: 300px;

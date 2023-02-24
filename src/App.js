@@ -1,9 +1,9 @@
 import * as React from 'react';
-
+import 'materialize-css';
 import Global from './styles/global';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
-import 'materialize-css';
+import MainPage from './Pages/Main/style';
 
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 function App() {
@@ -14,7 +14,7 @@ function App() {
         
         <Route path='/' element={<Login />} />
         <Route path='/register' element={<Register />} />
-        
+        <Route path='/main' element={<MainPage />} />
       </Routes>
     </Router> 
   );
