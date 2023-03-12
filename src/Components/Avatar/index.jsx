@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Button, TextInput, Icon } from 'react-materialize';
 import { useState } from "react";
+import BlankProfile from '../../Assets/Image/blank-profile.png'
 
 
 export default function Avatar({ content }) {
@@ -13,7 +14,7 @@ export default function Avatar({ content }) {
             <AvatarContainer>
                 <AvatarBox>
                   <ImgBox
-                    src={photoImg.file}
+                    src={photoImg.file ? photoImg.file : BlankProfile}
                     >
                   </ImgBox>               
                 </AvatarBox>

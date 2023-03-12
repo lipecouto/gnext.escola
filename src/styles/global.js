@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import bgimg from '../Assets/Image/testeimg.png'
+
 
 export const Global = createGlobalStyle`
 
@@ -53,19 +53,19 @@ export const Global = createGlobalStyle`
           }
         
           @media only screen and (min-width: 768px) {
-            width: 80vw;
-            height: 80vh;
+            width: 90vw;
+            height: 100vh;
             margin: 0 auto;
             
           }
           @media only screen and (min-width: 1024px) {
-            width: 70vw;
-            height: 50vh;
+            width: 99vw;
+            height: 100vh;
             margin: 0 auto;
             
           }
           @media only screen and (min-width: 1280px) {
-            width: 80vw;
+            width: 99vw;
             height: 80vh;
             margin: 0 auto;
             

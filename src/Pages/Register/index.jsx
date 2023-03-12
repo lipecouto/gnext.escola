@@ -6,17 +6,15 @@ import { Container,
          FormContainer } from "./style";
 import Avatar from "../../Components/Avatar";
 import Input from "../../Components/Input";
-
+import {Button, ButtonCancel, ButtomContainer} from "../../Components/Button";
 
 export default function Register() {
   return (
     <Container>
      <Box bgColor='white'>
        <RegisterContainer>
-          <Avatar>           
-          
-          </Avatar>
-         
+          <Avatar>                     
+          </Avatar>         
           <FormContainer>
             <BoxTitle>Registro</BoxTitle>
             <Input type="text" placeholder="Email" id={'email'} className='validate'/>
@@ -32,7 +30,12 @@ export default function Register() {
             <Input type="text" placeholder="CEP" id={'adressCode'} className='validate'/>
             <Input type="text" placeholder="Cidade" id={'city'} className='validate'/>
             <Input type="text" placeholder="Estado" id={'state'} className='validate'/>
+            <ButtomContainer>
+              <Button content={'Salvar'}/>
+              <ButtonCancel content={'Cancelar'}/>
+            </ButtomContainer>
           </FormContainer>
+          
        </RegisterContainer>
      </Box>
     </Container>

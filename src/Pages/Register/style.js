@@ -11,6 +11,7 @@ export const Container = styled.div`
   justify-content: center;
   margin: ${px2vw(0)};
   max-width: 100%;
+  background: rgb(240 240 242);
   box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
   height: 100%;
   @media (min-width: 1024px) {
@@ -23,7 +24,7 @@ export const Box = styled.div`
   width: ${px2vw(320, 320)};
   min-height: ${px2vw(200, 320)};
   padding-right: 5px;
- 
+
   background-color: ${props => props.bgColor};
  
 
