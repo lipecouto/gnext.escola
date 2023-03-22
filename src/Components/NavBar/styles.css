@@ -1,0 +1,20 @@
+.navBar{
+    background-color: #445ecd;
+    padding: 0px 10px 0px 10px;
+}
+
+.avatar-ajust{
+    display: flex;
+}
+
+.brand-name{
+    cursor: default;
+}
+
+.brand-name:hover{
+    background-color: #445ecd;
+}
+
+.logo{
+    margin-top: 10px;
+}

@@ -29,27 +29,37 @@ export const MainContainer = styled.div`
   @media only screen and (min-width: 360px) {
     width: 100vw;
     height: 100vh;
+    
+    h2 {
+      font-size: 2rem;
+    }
     h4 {
       font-size: small;
     }
   }
   @media only screen and (min-width: 411px) {
-    width: 80vw;
+    width: 70vw;
+    margin: 0 auto;
+    padding: 0 20% 0 20%;
     
   }
 
   @media only screen and (min-width: 768px) {
-    width: 80vw;
+    width: 70vw;
+    margin: 0 auto;
+    padding: 0 20% 0 20%;
     
   }
   
   @media only screen and (min-width: 1024px) {
     width: 70vw;
+    margin: 0 auto;
+    padding: 0 20% 0 20%;
     
   }
   @media only screen and (min-width: 1280px) {
-    width: 80vw;
-    
+    width: 70vw;
+    margin: 0 auto;
     padding: 0 20% 0 20%;
   }
 `;

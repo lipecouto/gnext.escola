@@ -9,9 +9,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 function App() {
   return (
     <Router>
-      <Global />
+      <Global />      
       <Routes>
-        
         <Route path='/' element={<Login />} />
         <Route path='/register' element={<Register />} />
         <Route path='/main' element={<MainPage />} />
