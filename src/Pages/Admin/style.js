@@ -24,7 +24,8 @@ export const AdmInput = styled(Input)`
 
 export const AdFormContainer = styled(FormContainer)`
     padding: 0px;
-    height: 100vh;
+    height: 100%;
+    padding-bottom: 20px;
 `
 
 export const FormBtn = styled.div`

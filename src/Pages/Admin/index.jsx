@@ -1,7 +1,7 @@
  
 import { Row, Col, Card, Icon, Container, Divider, Tabs, Tab } from "react-materialize";
 import FadeInOut from "../../hooks/FadeInOut";
-
+import Avatar from "../../Components/Avatar";
 import React, { useState } from "react";
 import { Button, RMButton, ButtonCancel } from "../../Components/Button";
 import { CadContainer, LinhaDivisora, 
@@ -116,7 +116,8 @@ const AdminPage = () => {
                                         <RMButton onClick={toggleshowEducatorCad} 
                                                 tooltip = 'Adicionar um Educador'
                                                 id='educatorAdd'>
-                                        </RMButton>                        
+                                        </RMButton> 
+                                        Adicionar novo Educador                         
                                     </CadContainer>
                             </FadeInOut>
                         </CardHeader> 
@@ -124,6 +125,7 @@ const AdminPage = () => {
                         <AdFormContainer>
                             <FadeInOut show={showEducatorCad} duration={200}>
                                 <ClassContainer>
+                                        <Avatar></Avatar>
                                         <AdmInput type="text" placeholder="Turma" id={'className'} className='validate'/>
                                         <AdmInput type="text" placeholder="Nome" id={'EducatorName'} className='validate'/>
                                         <AdmInput type="text" placeholder="Sobre Nome" id={'EducatorLastName'} className='validate'/>
@@ -152,7 +154,40 @@ const AdminPage = () => {
                         }}
                         title="Alunos"
                     >
-                        Test 3
+                        <CardHeader>
+                            <FadeInOut show={show} duration={300}>
+                                    <CadContainer>
+                                        <RMButton onClick={toggleshowEducatorCad} 
+                                                tooltip = 'Adicionar um Aluno'
+                                                id='alunoAdd'>
+                                        </RMButton>
+                                        Adicionar novo Aluno                        
+                                    </CadContainer>
+                            </FadeInOut>
+                        </CardHeader> 
+                      
+                        <AdFormContainer>
+                            <FadeInOut show={showEducatorCad} duration={200}>
+                                <ClassContainer>
+                                        <Avatar></Avatar>
+                                        <AdmInput type="text" placeholder="Turma do Aluno" id={'className'} className='validate'/>
+                                        <AdmInput type="text" placeholder="Nome" id={'EducatorName'} className='validate'/>
+                                        <AdmInput type="text" placeholder="Sobre Nome" id={'EducatorLastName'} className='validate'/>
+                                        <AdmInput type="date" placeholder="Data de Nascimento" id={'EducatorAdress2'} className='validate'/>  
+                                        <AdmInput type="text" placeholder="CPF" id={'EducatorId'} className='validate'/>
+                                        <AdmInput type="text" placeholder="Nome do Pai" id={'EducatorArea'} className='validate'/>
+                                        <AdmInput type="text" placeholder="Telefone" id={'EducatorAdressNumber'} className='validate'/>
+                                        <AdmInput type="text" placeholder="Nome da Mãe" id={'EducatorAdress'} className='validate'/>
+                                        <AdmInput type="text" placeholder="Telefone" id={'EducatorAdressNumber'} className='validate'/>
+                                        
+                                </ClassContainer>
+                                <FormBtn>
+                                    <Button content="Salvar"></Button>
+                                        <LinhaDivisora />
+                                        <ButtonCancel content="Cancelar" onClick={toggleshowEducatorCad} >{showEducatorCad ? "hide" : "show"} </ButtonCancel>
+                                </FormBtn>
+                            </FadeInOut>
+                        </AdFormContainer>
                     </Tab>
                     
                 </Tabs>       
