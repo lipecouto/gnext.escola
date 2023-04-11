@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export default function Input({ type, placeholder, id, iconName }) {
   return (
-    <InputDiv className="input-field col s6">
+    <InputDiv className="input-field">
       <StyledInput type={type} id={id}/>
       <InputLabel htmlFor={id}>{placeholder}</InputLabel>
     </InputDiv>);

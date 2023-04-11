@@ -1,14 +1,18 @@
 import styled from "styled-components";
+import { Button as Btn, Icon}  from "react-materialize";
 
-export function Button({ content }) {
-  return <StyledButton className="waves-light waves-effect" type="submit">{content}</StyledButton>;
+export function Button(props) {
+  return <StyledButton onClick={props.onClick} className="waves-light waves-effect" type="submit">{props.content}</StyledButton>;
 }
 
-export function ButtonCancel({ content }) {
-  return <StyledButtonCancel className="waves-light waves-effect" type="buttom">{content}</StyledButtonCancel>;
+export function ButtonCancel( props ) {
+  return <StyledButtonCancel className="waves-light waves-effect" type="buttom" onClick={props.onClick}>{props.content} </StyledButtonCancel>;
 }
 
-
+export function RMButton ( props ){
+  return <Btn id={props.id} onClick={props.onClick} floating className={props.className} icon={<Icon>add</Icon>} node="button" waves="light" tooltip={props.tooltip}>{props.content}</Btn> 
+}
+ 
 export const ButtomContainer = styled.div`
   display: flex;
   flex-direction: row;

@@ -71,6 +71,38 @@ export const Global = createGlobalStyle`
             
           }
     }
+
+    .admOptions{
+      background-color: #445ecd;
+      color: #fff !important;
+    }
+
+    .carousel{
+      perspective: none;
+    }
+    .tabs .tab a {
+      background-color: #445ecd;
+      color: #ffffff;
+    }
+    .carousel.carousel-slider{
+      min-height: 400px;
+      height: 750px;
+    }
+    .tabs .tab a:hover, .tabs .tab a.active {
+      color: #ffffff;
+      background-color: #44cd6f;
+    }
+    .tabs .tab a:focus, .tabs .tab a:focus.active {
+      color: #ffffff;
+      background-color: #44cd6f;
+    }
+    .tabs .indicator {
+      position: absolute;
+      bottom: 0;
+      height: 2px;
+      background-color: #74f8e5;
+      will-change: left, right;
+  }
 `;
 
 export default Global;

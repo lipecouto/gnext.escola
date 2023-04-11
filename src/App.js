@@ -4,8 +4,10 @@ import Global from './styles/global';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
 import MainPage from './Pages/Main/';
-
+import AdminPage from './Pages/Admin';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+
+
 function App() {
   return (
     <Router>
@@ -14,6 +16,7 @@ function App() {
         <Route path='/' element={<Login />} />
         <Route path='/register' element={<Register />} />
         <Route path='/main' element={<MainPage />} />
+        <Route path='/admin' element={<AdminPage />} />
       </Routes>
     </Router> 
   );
